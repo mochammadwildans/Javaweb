@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Selamat Datang di Smart Spring</h1>
+	<table>
+		<tr>
+			<td colspan="4">
+			Akun <a th:text = "${akunLempar}"></a> <!-- menampilkan data yang diambil tadi -->
+			Password <a th:text = "${passwordLempar}"></a>
+			</td>	
+		</tr>
+		<tr>
+			<td>
+				<ul>
+					<li>
+						<a th:href = "@{/menu1}">Menu 1</a>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<ul>
+					<li>
+						<a th:href = "@{/menu2}">Menu 2</a>
+					</li>
+				</ul>
+			</td>
+		</tr>	
+			<tr>
+			<td>
+				<ul>
+					<li>
+						<a th:href = "@{/menu3}">Menu 3</a>
+					</li>
+				</ul>
+			</td>
+		</tr>	
+	</table>
+</body>
+</html>

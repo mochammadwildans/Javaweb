@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Form Login</title>
+</head>
+<body>
+	<form th:action="@{/login/action}" method="post" > <!-- method untuk mempersingkat alamat webnya -->
+		<h1>Halaman Login</h1>
+		<table>
+			<tr>
+				<td>Akun</td>
+				<td><input type="text" name="akunHtml"></td> <!-- name didefinisikan untuk parameter -->
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="passwordHtml"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button type="submit">Submit</button></td>
+				<td><button type="reset">Ulang</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
+<!-- kalo mau buat button beda lagi maka agar mengarahkan nya 
+kebeda halaman harus dibuat form yang berbeda juga, krn  1 button 
+submit itu hanya dapat mengarah pada 1 form -->

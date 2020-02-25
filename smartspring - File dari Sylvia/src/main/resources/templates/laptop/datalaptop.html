@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Data Laptop</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td></td>
+			 <td>
+				<form th:action="@{/laptop/search/nama}" method="post">
+					<input type="text" name="cari" />
+					<button type="submit">Cari</button>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>Serial Number</td>
+			<td>Nama Laptop</td>
+			<td>Seri Laptop</td>
+			<td>Spesifikasi</td>
+			<td>Harga</td>
+		</tr>
+		
+		<tr th:each="laptopModel:${laptopModelList}">
+			<td><a th:text = "${laptopModel.serialNumber}"></a></td>
+			<td><a th:text = "${laptopModel.namaLaptop}"></a></td>
+			<td><a th:text = "${laptopModel.seriLaptop}"></a></td>
+			<td><a th:text = "${laptopModel.spesifikasi}"></a></td>
+			<td><a th:text = "${laptopModel.harga}"></a></td>
+		</tr>
+	</table>
+</body>
+</html>

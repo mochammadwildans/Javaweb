@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Validasi</title>
+</head>
+<body>
+	<h2>Validasi Example</h2>
+	
+	<br>
+	<br>
+	<h2 style="color:red; font-size:12px; display:none" id="tdValidasi">Tidak Boleh Kosong</h2>
+	<input type="text" id="username">
+	<button type="button" onclick="ubah();"> Validasi </button> <!-- Ini Buat Muncul saat diklik ada event -->
+	<h1 id="demo"></h1>
+
+</body>
+	<script type="text/javascript">
+		function ubah(){
+			document.getElementById('demo').innerHTML = "ini event klik"/*  /*inner Html untuk Memberikan Atribut / mengisi */
+			
+		}
+		function validate() {
+			var username = document.getElementById("username");
+			var tdValidasi = document.getElementById("tdValidasi");
+			
+			if (username.value == ""){
+					tdValidasi.style.display="block";
+			} else {
+					tdValidasi.style.display="none";
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login 2</title>
+</head>
+<body>
+		<form th:action="@{/login2/action}" method="post" > <!-- method untuk mempersingkat alamat webnya -->
+		<h1>Halaman Login</h1>
+		<table>
+			<tr>
+				<td>Nama</td>
+				<td><input type="text" name="namaHtml"></td> <!-- name didefinisikan untuk parameter -->
+			</tr>
+			<tr>
+				<td></td>
+				<td><button type="submit">Simpan</button></td>
+			</tr>
+		</table>
+		</form>
+</body>
+</html>

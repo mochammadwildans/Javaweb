@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Menu 3</title>
+</head>
+<body>
+	<form th:action="@{/laptop/create}" method="post">
+		<table>
+			<tr>
+				<td>Serial Number</td>
+				<td><input type="text" name="serialNumber" id="serialNumberId"></td>
+			</tr>
+			<tr>
+				<td>Nama Laptop</td>
+				<td><input type="text" name="namaLaptop"></td>
+			</tr>
+			<tr>
+				<td>Seri Laptop</td>
+				<td><input type="text" name="seriLaptop" ></td>
+			</tr>
+			<tr>
+				<td>Spesifikasi</td>
+				<td><input type="text" name="spesifikasi" ></td>
+			</tr>
+			<tr>
+				<td>Harga</td>
+				<td><input type="text" name="harga" id="hargaId"></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Submit</button></td>
+				<td><button type="reset">Ulang</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

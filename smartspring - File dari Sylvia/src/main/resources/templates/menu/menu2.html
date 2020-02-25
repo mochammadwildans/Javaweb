@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Menu 2</title>
+</head>
+<body>
+	<form th:action="@{/mahasiswa/create}" method="post">
+		<table>
+			<tr>
+				<td>NPM</td>
+				<td><input type="text" name="npm"></td>
+			</tr>
+			<tr>
+				<td>Nama Mahasiswa</td>
+				<td><input type="text" name="nama"></td>
+			</tr>
+			<tr>
+				<td>Kelas</td>
+				<td><select name="kelas" id="kelasId">
+						<option>A</option>
+						<option>B</option>
+						<option>C</option>
+						<option>D</option>
+						<option>E</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Semester</td>
+				<td><input type="text" name="semester" id="semesterId"></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Submit</button></td>
+				<td><button type="reset">Ulang</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

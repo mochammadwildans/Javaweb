@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Data Mahasiswa</title>
+</head>
+<body>
+	<h1>Data Mahasiswa</h1>
+	<table border="1">
+		<tr>
+			<td></td>
+			 <td>
+				<form th:action="@{/mahasiswa/search/nama}" method="post">
+					<input type="text" name="cari" />
+					<button type="submit">Cari</button>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>NPM</td>
+			<td>Nama Mahasiswa</td>
+			<td>Kelas</td>
+			<td>Semester</td>
+		</tr>
+		
+		<tr th:each="mahasiswaModel:${mahasiswaModelList}">
+			<td><a th:text = "${mahasiswaModel.npm}"></a></td>
+			<td><a th:text = "${mahasiswaModel.nama}"></a></td>
+			<td><a th:text = "${mahasiswaModel.kelas}"></a></td>
+			<td><a th:text = "${mahasiswaModel.semester}"></a></td>
+		</tr>
+	</table>
+</body>
+</html>

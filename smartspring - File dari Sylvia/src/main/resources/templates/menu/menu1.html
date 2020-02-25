@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/pasien/create}" method="post">
+		<table>
+			<tr>
+				<td>Nomor Pasien</td>
+				<td><input type="text" name="nomor"></td>
+			</tr>
+			<tr>
+				<td>Nama Pasien</td>
+				<td><input type="text" name="nama"></td>
+			</tr>
+			<tr>
+				<td>Gender Pasien</td>
+				<td><input type="radio" name="gender" value="Pria">Pria</td>
+				<td><input type="radio" name="gender" value="Wanita">Wanita</td>
+			</tr>
+			<tr>
+				<td>Kategori Pasien</td>
+				<td><select name="kategori" id="kategori">
+						<option>BPJS</option>
+						<option>Asuransi</option>
+						<option>Pribadi</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Biaya Pasien</td>
+				<td><input type="text" name="biaya" id="biayaId"></td>
+			</tr>
+			<tr>
+				<td>Tanggal Lahir</td>
+				<td><input type="date" name="tanggalLahir"></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Submit</button></td>
+				<td><button type="reset">Ulang</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

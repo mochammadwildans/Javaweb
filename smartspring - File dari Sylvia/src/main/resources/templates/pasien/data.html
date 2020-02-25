@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Data Pasien</title>
+</head>
+<body>
+	<h1>Data Pasien</h1>
+	<table border="1">
+		<tr>
+			<td></td>
+			<td> <!-- thymleaf gak bisa membaca pagar hrs ada urlnya jadi kalo mau coba jangan pake th -->
+				<form th:action="@{/pasien/search/nama}" method="post">
+					<input type="text" name="cari" />
+					<button type="submit">Cari</button>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>No</td>
+			<td>Nama</td>
+			<td>Gender</td>
+			<td>Kategori</td>
+			<td>Biaya</td>
+			<td>Tanggal Lahir</td>
+		</tr>
+		<!-- Ini dilooping sebanyak yg kita punya -->
+		<!-- fungsi th:each untuk melooping sebanyak atribut pada tabel 
+		sedangkan pasienModel dan pasienModelLis itu dibuat dicontroller. Jadi ini itu 
+		fungsinya buat nampilin data aja di frontend -->
+		<tr th:each="pasienModel:${pasienModelList}">
+			<td><a th:text = "${pasienModel.nomor}"></a></td>
+			<td><a th:text = "${pasienModel.nama}"></a></td>
+			<td><a th:text = "${pasienModel.gender}"></a></td>
+			<td><a th:text = "${pasienModel.kategori}"></a></td>
+			<td><a th:text = "${pasienModel.biaya}"></a></td>
+			<td><a th:text = "${pasienModel.tanggalLahir}"></a></td>
+		</tr>
+	</table>
+</body>
+</html>
